@@ -13,23 +13,45 @@
 <body>
 <header>
     <div class="logo">
-        <a>
+        <div>
             <img src="png/airbnb_logo.png" alt="Airbnb logo">
-        </a>
+        </div>
     </div>
     <div class="search">
-        <button>Будь-куди</button>
-        <button>Будь-який тиждень</button>
-        <button>Додайте гостей</button>
-        <button>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+        <div class="non-hover">
+            <button>Будь-куди</button>
+            <button>Будь-який тиждень</button>
+            <button>Додайте гостей</button>
+        </div>
+        <div class="on-hover">
+            <div>
+                <label for="where">Куди</label>
+                <input type="text" id="where" placeholder="Пошук напрямків">
+            </div>
+            <div>
+                <label for="start-date">Прибуття</label>
+                <input type="date" id="start-date" placeholder="Додайте дати">
+            </div>
+            <div>
+                <label for="end-date">Виїзд</label>
+                <input type="date" id="end-date" placeholder="Додайте дати">
+            </div>
+            <div>
+                <label for="who">Хто</label>
+                <input type="number" min="1" max="10" id="who" placeholder="Додайте гостей">
+            </div>
+        </div>
+        <button class="search-icon">
+            <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                 aria-hidden="true"
                  role="presentation" focusable="false"
-                 style="display: block; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                 style="display: block; fill: none; height: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
                 <path fill="none" d="M13 24a11 11 0 1 0 0-22 11 11 0 0 0 0 22zm8-3 9 9"></path>
             </svg>
+            <span class="on-hover">Пошук</span>
         </button>
     </div>
-    <div class="navigation-bar flex-center">
+    <div class="navigation-bar">
         <button class="button-hover">Запропонувати помешкання на Airbnb</button>
         <button class="button-hover">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" aria-hidden="true"
@@ -51,5 +73,11 @@
         </button>
     </div>
 </header>
+<form>
+    <div>
+        <h1 class="form-title">Фільтри</h1>
+
+    </div>
+</form>
 </body>
 </html>
