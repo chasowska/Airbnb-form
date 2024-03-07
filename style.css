@@ -462,6 +462,37 @@ input[type=range]::-webkit-slider-thumb:active {
     background: lightgrey;
 }
 
+.form-section-room h2 {
+    padding-bottom: 24px;
+}
+
+.form-section-room h3 {
+    font-size: 16px;
+    padding: 4px 2px 24px;
+}
+
+.form-section-room > div {
+    padding-bottom: 24px;
+}
+
+.room-label {
+    cursor: pointer;
+    padding: 11px 24px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.room-label:hover {
+    border: 1px solid black;
+}
+
+.form-section-room input:checked + label {
+    background: black;
+    color: white;
+    border: 1px solid black;
+}
+
 /*footer*/
 
 .form-footer {
