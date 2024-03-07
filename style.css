@@ -14,16 +14,21 @@ body {
     background-color: #ffdde3;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, ul, li {
     padding: 0;
     margin: 0;
     font: inherit;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .sr-only {
     width: 0;
     height: 0;
     visibility: hidden;
+    display: none;
 }
 
 header {
@@ -247,6 +252,7 @@ form {
 form h2 {
     font-size: 22px;
     font-weight: 500;
+    padding-bottom: 24px;
 }
 
 .form-cross {
@@ -266,6 +272,7 @@ form h2 {
     position: sticky;
     top: 0;
     background: white;
+    z-index: 10;
 }
 
 form h1 {
@@ -280,10 +287,6 @@ form h1 {
 .form-section section:not(section:last-child) {
     padding: 24px;
     border-bottom: 1px solid #ececec;
-}
-
-.form-section-type h2 {
-    padding-bottom: 24px;
 }
 
 .form-section-type div {
@@ -328,6 +331,10 @@ form h1 {
     background-color: black;
     color: white;
     border: 1px solid black;
+}
+
+.form-section-price h2 {
+    padding-bottom: 0;
 }
 
 .form-section-price p {
@@ -462,10 +469,6 @@ input[type=range]::-webkit-slider-thumb:active {
     background: lightgrey;
 }
 
-.form-section-room h2 {
-    padding-bottom: 24px;
-}
-
 .form-section-room h3 {
     font-size: 16px;
     padding: 4px 2px 24px;
@@ -481,6 +484,7 @@ input[type=range]::-webkit-slider-thumb:active {
     border: 1px solid lightgray;
     border-radius: 20px;
     display: inline-block;
+    margin-right: 6px;
 }
 
 .room-label:hover {
@@ -491,6 +495,56 @@ input[type=range]::-webkit-slider-thumb:active {
     background: black;
     color: white;
     border: 1px solid black;
+}
+
+.form-section-top ul {
+    display: flex;
+    gap: 10px;
+}
+
+.form-section-top label {
+    border: 1px solid lightgrey;
+    padding: 20px 24px;
+    border-radius: 12px;
+    max-width: 350px;
+    display: block;
+    cursor: pointer;
+    transition: transform, background-color, border-color;
+    transition-duration: 0.15s;
+}
+
+.form-section-top label:active {
+    transform: scale(0.925);
+}
+
+.form-section-top label:hover {
+    border: 1px solid black;
+}
+
+.form-section-top svg {
+    margin-bottom: 12px;
+}
+
+.form-section-top span {
+    display: block;
+    width: 90%;
+}
+
+.top-title {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+}
+
+.top-description {
+    color: grey;
+    text-align: left;
+    margin-top: 4px;
+}
+
+.form-section-top input:checked + label {
+    background: #f3f3f3;
+    border: 2px solid black;
 }
 
 /*footer*/
