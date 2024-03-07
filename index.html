@@ -74,9 +74,122 @@
     </div>
 </header>
 <form>
-    <div>
-        <h1 class="form-title">Фільтри</h1>
-
+    <div class="form-header">
+        <div class="form-cross">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"
+                 role="presentation" focusable="false"
+                 style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                <path d="m6 6 20 20M26 6 6 26"></path>
+            </svg>
+        </div>
+        <h1>Фільтри</h1>
+    </div>
+    <div class="form-section">
+        <section class="form-section-type">
+            <h2>Тип місця для розміщення</h2>
+            <p>Шукайте кімнати, цілі помешкання або будь-які інші місця для розміщення</p>
+            <div>
+                <input checked class="sr-only" type="radio" name="type" id="any">
+                <label class="select-label" for="any">Будь-який тип</label>
+                <input class="sr-only" type="radio" name="type" id="room">
+                <label class="select-label" for="room">Кімната</label>
+                <input class="sr-only" type="radio" name="type" id="apartment">
+                <label class="select-label" for="apartment">Помешкання цілком</label>
+            </div>
+        </section>
+        <section class="form-section-price">
+            <h2>Діапазон цін</h2>
+            <p>Ціни за ніч до сплати зборів і податків</p>
+            <div class="form-section-price-range">
+                <div class="price-columns">
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-4"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-2"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-3"></div>
+                    <div class="price-columns-1"></div>
+                    <div class="price-columns-1"></div>
+                </div>
+                <div class="multi-range">
+                    <input type="range" name="price" min="0" max="100" value="0" id="lower">
+                    <input type="range" name="price" min="0" max="100" value="100" id="upper">
+                </div>
+                <div class="price-buttons">
+                    <div class="price-min">
+                        <div>
+                            <span>$</span>
+                            <label for="price-min">Мінімум</label>
+                            <input type="text" name="price-min" id="price-min">
+                        </div>
+                    </div>
+                    <div class="price-line"></div>
+                    <div class="price-max">
+                        <div>
+                            <span>$</span>
+                            <label for="price-max">Максимум</label>
+                            <input type="text" name="price-max" id="price-max">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-section-room">
+            <h2></h2>
+            <p></p>
+            <div></div>
+        </section>
+        <section class="form-section-">
+            <h2></h2>
+            <p></p>
+            <div></div>
+        </section>
+    </div>
+    <div class="form-footer">
+        <button type="reset">Очистити все</button>
+        <button>Показати 904 місця</button>
     </div>
 </form>
 </body>

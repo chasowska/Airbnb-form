@@ -10,10 +10,20 @@ html {
     height: 100%;
 }
 
+body {
+    background-color: #ffdde3;
+}
+
 h1, h2, h3, h4, h5 {
     padding: 0;
     margin: 0;
     font: inherit;
+}
+
+.sr-only {
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 
 header {
@@ -24,6 +34,7 @@ header {
     border-bottom: 1px solid lightgrey;
     transition: height 0.3s ease;
     height: 82px;
+    background-color: white;
 }
 
 header > div {
@@ -222,17 +233,273 @@ header:hover .on-hover div:first-child {
 }
 
 form {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
+    max-height: 80vh;
+    overflow: hidden;
+    width: 60%;
+    position: relative;
+    border: 1px solid lightgrey;
+    border-radius: 12px;
+    background-color: white;
+    margin: 50px auto 0;
+    overflow-y: auto;
 }
 
-form > div {
+form h2 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.form-cross {
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.form-cross:hover {
+    background-color: #ececec;
+}
+
+.form-header {
+    position: sticky;
+    top: 0;
+    background: white;
+}
+
+form h1 {
+    padding: 15px 0;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #ececec;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.form-section section:not(section:last-child) {
+    padding: 24px;
+    border-bottom: 1px solid #ececec;
+}
+
+.form-section-type h2 {
+    padding-bottom: 24px;
+}
+
+.form-section-type div {
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.select-label {
+    border: 1px solid lightgrey;
+    width: 205px;
+    padding: 22px;
+    cursor: pointer;
+    margin-left: -1px;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+}
+
+.select-label:hover {
+    border: 1px solid black;
+}
+
+.form-section-type div label:nth-child(2):hover {
+    z-index: 1;
+}
+
+.form-section-type div label:nth-child(4):hover {
+    z-index: 2;
+}
+
+.form-section-type div label:nth-child(2) {
+    border-radius: 12px 0 0 12px;
+}
+
+.form-section-type div label:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.form-section-type input:checked + label {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.form-section-price p {
+    padding: 8px 0 24px 0;
+}
+
+.form-section-price-range {
+    position: relative;
+}
+
+.form-section-price-range > div:first-child {
+    position: relative;
+}
+
+.price-columns {
+    display: grid;
+    gap: 2px;
+    grid-auto-flow: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.price-columns div {
+    width: 10px;
+    height: 60px;
+    background: #262626;
+    position: relative;
+}
+
+.price-columns-1 {
+    top: 1px;
+}
+
+.price-columns-2 {
+    top: 20px;
+}
+
+.price-columns-3 {
+    top: 28px;
+}
+
+.price-columns-4 {
+    top: 45px;
+}
+
+.multi-range {
+    position: relative;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.multi-range input[type=range]:last-child {
+    background: none;
+}
+
+input[type=range] {
+    appearance: none;
+    width: 90%;
+    border-radius: 1px;
+    background: linear-gradient(black, black) no-repeat center;
+    background-size: 100% 2px;
+    pointer-events: none;
+    position: absolute;
+}
+
+input[type=range]:active,
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    height: 32px;
+    width: 32px;
+    border-radius: 28px;
+    background-color: #fff;
+    margin: 5px 0;
+    cursor: pointer;
+    pointer-events: all;
+    box-shadow: 0 1px 8px 0 rgb(0 0 0 / 16%);
     border: 1px solid lightgrey;
 }
 
-.form-title {
-    font-weight: bold;
+input[type=range]::-webkit-slider-thumb:active {
+    transform: scale(1.1875);
 }
 
+.price-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.price-min, .price-max {
+    flex-grow: 1;
+}
+
+.price-min > div, .price-max > div {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.price-buttons label {
+    position: absolute;
+    color: grey;
+    font-size: 12px;
+    bottom: 32px;
+    left: 12px;
+}
+
+.price-buttons input {
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+    padding: 24px 8px 12px 25px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.price-buttons span {
+    position: absolute;
+    top: 24px;
+    left: 12px;
+    font-size: 16px;
+}
+
+.price-line {
+    width: 16px;
+    height: 1px;
+    background: lightgrey;
+}
+
+/*footer*/
+
+.form-footer {
+    border-top: 1px solid lightgrey;
+    background: white;
+    padding: 16px 24px;
+    display: flex;
+    position: sticky;
+    bottom: 0;
+    justify-content: space-between;
+}
+
+.form-footer button:first-child {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-footer button:first-child:hover {
+    background-color: #ececec;
+}
+
+.form-footer button:last-child {
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background-color: #262626;
+    cursor: pointer;
+}
+
+.form-footer button:last-child:hover {
+    background-color: black;
+}
 
