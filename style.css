@@ -647,6 +647,102 @@ input[type=range]::-webkit-slider-thumb:active {
     border: 1px solid black;
 }
 
+.form-section-options li {
+    padding: 12px 4px 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section-options div {
+    font-size: 16px;
+}
+
+.form-section-options div span {
+    padding-top: 4px;
+    color: grey;
+    display: block;
+}
+
+.form-section-options a {
+    padding-top: 4px;
+    font-weight: 500;
+    color: grey;
+    text-decoration: underline;
+    display: block;
+}
+
+.switch {
+    position: relative;
+    width: 48px;
+    height: 32px;
+}
+
+
+.switch input {
+    appearance: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #B0B0B0;
+    border: 1px solid #B0B0B0;
+    border-radius: 32px;
+    outline: none;
+}
+
+.slider:hover {
+    background: black;
+    border: 1px solid black;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    left: 1px;
+    bottom: 1px;
+    background-color: #fff;
+    transition: transform .2s ease-in-out 0s;
+}
+
+.slider-icon {
+    opacity: 0;
+    height: 12px;
+    width: 12px;
+    stroke-width: 4;
+    position: absolute;
+    z-index: 999;
+    stroke: black;
+    right: 57%;
+    top: 30%;
+    transition: right ease-in-out .2s, opacity ease-in-out .1s;
+    cursor: pointer;
+}
+
+input:checked + .slider {
+    background-color: black;
+    border: 1px solid black;
+}
+
+input:checked + .slider + .slider-icon {
+    opacity: 1;
+    right: 20%;
+}
+
+input:checked + .slider::before {
+    transform: translateX(16px);
+    outline-color: black;
+}
+
 /*footer*/
 
 .form-footer {
