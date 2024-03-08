@@ -240,7 +240,7 @@ header:hover .on-hover div:first-child {
 form {
     max-height: 80vh;
     overflow: hidden;
-    width: 60%;
+    max-width: 780px;
     position: relative;
     border: 1px solid lightgrey;
     border-radius: 12px;
@@ -543,6 +543,53 @@ input[type=range]::-webkit-slider-thumb:active {
 }
 
 .form-section-top input:checked + label {
+    background: #f3f3f3;
+    border: 2px solid black;
+    padding-bottom: 18px;
+}
+
+.form-section-property ul {
+    display: flex;
+    gap: 10px;
+}
+
+.form-section-property li {
+    width: 100%;
+}
+
+.form-section-property label {
+    border: 1px solid lightgrey;
+    padding: 16px;
+    border-radius: 12px;
+    max-width: 168px;
+    display: block;
+    cursor: pointer;
+    transition: transform, background-color, border-color;
+    transition-duration: 0.15s;
+}
+
+.form-section-property label:active {
+    transform: scale(0.925);
+}
+
+.form-section-property label:hover {
+    border: 1px solid black;
+}
+
+.form-section-property img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+}
+
+.form-section-property span {
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+    padding-top: 25px;
+}
+
+.form-section-property input:checked + label {
     background: #f3f3f3;
     border: 2px solid black;
 }
